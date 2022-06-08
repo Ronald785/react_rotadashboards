@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Book = ( props ) => {
+const Card = ( props ) => {
 
     return(
         <div className="card-single">
@@ -24,5 +24,5 @@ const Book = ( props ) => {
     );
 }
 
-export default Book;
+export default Card;
 

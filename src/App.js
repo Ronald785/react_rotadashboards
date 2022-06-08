@@ -6,10 +6,10 @@ import Sidebar from '../src/components/Sidebar/Sidebar';
 import Team from '../src/components/Team/Team';
 import Report from '../src/components/Report/Report';
 import Graphics from '../src/components/Graphics/Graphics';
-import Cards from './components/Cards/Cards.js';
+import Dash from './components/Dash/Dash.js';
 
 function App() {
-
+ 
   const [cards] = useState(
     [
       {
@@ -36,25 +36,38 @@ function App() {
   return (
     <div className="App">
         <BrowserRouter>
+            <input type="checkbox" id="sidebar-toggle"/>
+            
             <Sidebar />
-
+            
             <div className="main-content">
+                <header>
+                  <div className="menu-toggle">
+                    <label for="sidebar-toggle">
+                      <span className="las la-bars"></span>
+                    </label>
+                  </div>
+                  <h1>RotaDashboards</h1>
+                </header>
+
                 <main>
-                    <div className="page-header">
-                        <div>
-                            <h1>Análise Dashboard</h1>
-                            <small>Monitoração das principais métricas</small>
-                        </div>
-                    </div>
                     <Routes>
-                        <Route path="/" element={<Cards cards={cards}/>} /> 
+                        <Route path="/" element={<Dash cards={cards}/>} /> 
                         <Route path="/graphics" element={<Graphics />} /> 
                         <Route path="/team" element={<Team />} /> 
                         <Route path="/Report" element={<Report />} /> 
-
                     </Routes>
                 </main>
+
+                <footer>
+                  <h1>Desenvolvedores</h1>
+                  <ul>
+                    <li>Ronald Almeida</li>
+                    <li>Marcos Ota</li>
+                  </ul>
+                </footer>
             </div>
+            <label for="sidebar-toggle" class="body-label"></label>
         </BrowserRouter>
     </div>
   );

@@ -483,3 +483,6 @@ table button:hover {
     background-color: #5cb85c;
     color: white;
   }
+  span.las.la-shopping-cart {
+    font-size: 50px;
+  }

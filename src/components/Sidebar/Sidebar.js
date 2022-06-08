@@ -16,7 +16,7 @@ const Sidebar = () => {
 
                 <div className="sidebar-menu">
                     <div className="menu-head">
-                        <span>Dashboard</span>
+                        <span>Navegação</span>
                     </div>
                     <nav>
                         <ul>
@@ -30,7 +30,7 @@ const Sidebar = () => {
                                 <NavLink to="/team">Equipe</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/report">E-mail</NavLink>
+                                <NavLink to="/report">Contate-nos</NavLink>
                             </li>
                         </ul>
                     </nav>
