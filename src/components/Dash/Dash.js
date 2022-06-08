@@ -1,33 +1,35 @@
 import React from "react";
 import Card from '../Card/Card';
 import Invoice from '../Invoice/Invoice';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Dash = (props) => {
   
   const [invoices, setInvoices] = useState([]);
 
-  let url = "https://rotadashboards-default-rtdb.firebaseio.com/faturas.json";
-  let newInvoice = [];
-
-  fetch(url).then(response => response.json())
-  .then(faturas => {
-    console.log("Faturas", faturas);
-
-    for(let i = faturas.length-5; i < faturas.length-1; i++) {
-      let objectInvoice = {};
-      objectInvoice.name = faturas[i].nome;
-      objectInvoice.type = faturas[i].tipo;
-      objectInvoice.amount = faturas[i].quantidade;
-      objectInvoice.number = faturas[i].número;
-      objectInvoice.date = faturas[i].data;
-
-      newInvoice.push(objectInvoice);
-      
-    }
-    console.log(newInvoice);
-    setInvoices(newInvoice);
-  });
+  useEffect (() => {
+    let url = "https://rotadashboards-default-rtdb.firebaseio.com/faturas.json";
+    let newInvoice = [];
+  
+    fetch(url).then(response => response.json())
+    .then(faturas => {
+      console.log("Faturas", faturas);
+  
+      for(let i = faturas.length-5; i < faturas.length-1; i++) {
+        let objectInvoice = {};
+        objectInvoice.name = faturas[i].nome;
+        objectInvoice.type = faturas[i].tipo;
+        objectInvoice.amount = faturas[i].quantidade;
+        objectInvoice.number = faturas[i].número;
+        objectInvoice.date = faturas[i].data;
+  
+        newInvoice.push(objectInvoice);
+        
+      }
+      console.log(newInvoice);
+      setInvoices(newInvoice);
+    });
+  }, []);
 
   return (
     <div>

@@ -2,7 +2,6 @@ import React from 'react';
 import './Invoice.css';
 
 const Invoice = ( props ) => {
-    console.log("Props: ", props);
     return(
         <tr>
             <td>
