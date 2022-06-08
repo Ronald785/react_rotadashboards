@@ -486,3 +486,12 @@ table button:hover {
   span.las.la-shopping-cart {
     font-size: 50px;
   }
+
+  footer {
+      text-align: right;
+      margin: 10px;
+  }
+
+  footer h1 {
+      font-size: 24px;
+  }

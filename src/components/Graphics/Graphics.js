@@ -170,18 +170,26 @@ import HighchartsReact from 'highcharts-react-official'
       
     const Graphics = () => {
         return (
-            <div className="cards">
-                <div className="card-single">
-                    <div id="column"></div>
-                    <HighchartsReact highcharts={Highcharts} options={options} />
+            <div>
+            <div className="page-header">
+                <div>
+                    <h1>Gráficos</h1>
+                    <small>Visualização das vendas</small>
                 </div>
-                <div className="card-single">
-                    <div id="bar"></div>
-                    <HighchartsReact highcharts={Highcharts} options={options2} />
-                </div>
-                <div className="card-single">
-                    <div id="line"></div>
-                    <HighchartsReact highcharts={Highcharts} options={options3} />
+            </div>
+                <div className="cards">
+                    <div className="card-single">
+                        <div id="column"></div>
+                        <HighchartsReact highcharts={Highcharts} options={options} />
+                    </div>
+                    <div className="card-single">
+                        <div id="bar"></div>
+                        <HighchartsReact highcharts={Highcharts} options={options2} />
+                    </div>
+                    <div className="card-single">
+                        <div id="line"></div>
+                        <HighchartsReact highcharts={Highcharts} options={options3} />
+                    </div>
                 </div>
             </div>
         );

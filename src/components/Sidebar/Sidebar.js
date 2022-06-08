@@ -32,6 +32,9 @@ const Sidebar = () => {
                             <li>
                                 <NavLink to="/report">Contate-nos</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/config">Configurações</NavLink>
+                            </li>
                         </ul>
                     </nav>
                 </div>

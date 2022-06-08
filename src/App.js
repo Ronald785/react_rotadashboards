@@ -7,6 +7,7 @@ import Team from '../src/components/Team/Team';
 import Report from '../src/components/Report/Report';
 import Graphics from '../src/components/Graphics/Graphics';
 import Dash from './components/Dash/Dash.js';
+import Config from './components/Config/Config.js';
 
 function App() {
  
@@ -56,6 +57,7 @@ function App() {
                         <Route path="/graphics" element={<Graphics />} /> 
                         <Route path="/team" element={<Team />} /> 
                         <Route path="/Report" element={<Report />} /> 
+                        <Route path="/Config" element={<Config />} /> 
                     </Routes>
                 </main>
 
