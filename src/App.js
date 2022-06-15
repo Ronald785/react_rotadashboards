@@ -4,6 +4,7 @@ import './App.css';
 
 import Sidebar from '../src/components/Sidebar/Sidebar';
 import Team from '../src/components/Team/Team';
+import About from '../src/components/About/About';
 import Report from '../src/components/Report/Report';
 import Graphics from '../src/components/Graphics/Graphics';
 import Dash from './components/Dash/Dash.js';
@@ -14,22 +15,22 @@ function App() {
   const [cards] = useState(
     [
       {
-        titleCard: "Crescimento de vendas",
-        subtitleCard: "Porcentagem do crescimento",
+        titleCard: "Crescimento",
+        subtitleCard: "Valor",
         valueCard: "R$75.000",
         percentageCard: "5% mais que o mes anterior"
       },
       {
         titleCard: "Vendas",
-        subtitleCard: "Numero de vendas no mês",
+        subtitleCard: "N° de vendas",
         valueCard: "4.523",
         percentageCard: "7%  mais queo o mês anterior"
       },
       {
         titleCard: "Lucro",
-        subtitleCard: "Valor lucrado",
-        valueCard: "R$167.085",
-        percentageCard: "5%  mais queo o mês anterior"
+        subtitleCard: "Total lucrado",
+        valueCard: "R$30.085",
+        percentageCard: "6%  mais queo o mês anterior"
       },
     ]
   );
@@ -48,13 +49,14 @@ function App() {
                       <span className="las la-bars"></span>
                     </label>
                   </div>
-                  <h1>RotaDashboards</h1>
+                  <h1 style={{fontSize:'24px'}}>RotaDashboard</h1>
                 </header>
 
                 <main>
                     <Routes>
                         <Route path="/" element={<Dash cards={cards}/>} /> 
                         <Route path="/graphics" element={<Graphics />} /> 
+                        <Route path="/about" element={<About />} /> 
                         <Route path="/team" element={<Team />} /> 
                         <Route path="/Report" element={<Report />} /> 
                         <Route path="/Config" element={<Config />} /> 

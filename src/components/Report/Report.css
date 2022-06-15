@@ -13,8 +13,13 @@ input, select {
     border-radius: 5px;
 }
 
+select {
+    width: 175px;
+}
+
 textarea {
     display: block;
+    width: 175px;
 }
 
 button {
@@ -25,7 +30,17 @@ button {
     padding: 10px 70px;
 }
 
+button {
+    margin-top: 5px;
+    padding: 5px 65px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #1a202eb7;
+    color: #fff;
+}
+
 button:hover {
     cursor: pointer;
-    background-color: #d1d4d6;
+    background-color: #1a202e1a;
+    color: black;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Team.css';
-import imageRonald from '../Team/ronald.jpg';
-import imageMarcos from '../Team/marcos_photo.jpg'; 
+import imageRonald from '../../assets/images/ronald.jpg';
+import imageMarcos from '../../assets/images/marcos_photo.jpg'; 
 
 const Team = () => {
     return (

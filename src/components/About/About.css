@@ -1,0 +1,39 @@
+.img-team {
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.cards-dev{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    margin-top: 2rem;
+}
+
+.card-dev {
+    background:  #fff;
+    padding: 1.5rem 2rem;
+}
+
+.card-dev h1, h2, h3, p {
+    text-align: center;
+}
+
+.info-person{
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .cards-dev {
+        grid-template-columns: 100%;
+    }
+
+}

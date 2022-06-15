@@ -2,6 +2,7 @@ import React from "react";
 import Card from '../Card/Card';
 import Invoice from '../Invoice/Invoice';
 import { useState, useEffect } from 'react';
+import './Dash.css';
 
 const Dash = (props) => {
   
@@ -13,8 +14,6 @@ const Dash = (props) => {
   
     fetch(url).then(response => response.json())
     .then(faturas => {
-      console.log("Faturas", faturas);
-  
       for(let i = faturas.length-5; i < faturas.length-1; i++) {
         let objectInvoice = {};
         objectInvoice.name = faturas[i].nome;
@@ -24,9 +23,7 @@ const Dash = (props) => {
         objectInvoice.date = faturas[i].data;
   
         newInvoice.push(objectInvoice);
-        
       }
-      console.log(newInvoice);
       setInvoices(newInvoice);
     });
   }, []);

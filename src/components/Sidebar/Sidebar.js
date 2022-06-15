@@ -27,6 +27,9 @@ const Sidebar = () => {
                                 <NavLink to="/graphics">Gráficos</NavLink>
                             </li>
                             <li>
+                                <NavLink to="/about">Sobre nós</NavLink>
+                            </li>
+                            <li>
                                 <NavLink to="/team">Equipe</NavLink>
                             </li>
                             <li>
