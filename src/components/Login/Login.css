@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align:baseline;
+    list-style:none;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 5%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    max-width: 300px;
+    padding: 50px;
+    /* border: 1px solid black; */
+    /* top: 100%; */
+    /* background-color: #1e8fffbe; */
+    box-shadow: 5px 5px 5px 3px #09097983;
+    /* position: absolute; */
+}
+
+.login > h1 {
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login > h2 {
+    font-size: 1rem;
+    color: aliceblue;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* .login > .create-acount {
+    font-size: .9rem;
+    color: #1e8fffdc;
+    margin-top: 20px;
+    text-align: center;
+} */
+
+
+.inputField > input {
+    /* border: 1px solid #00478f; */
+    opacity: 0.8;
+    background-color: #1f88f1ee;
+    /* background: transparent; */
+    padding: 12px 20px 12px 40px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    border-radius: 5px;
+    max-width: 100%;
+    text-align: center;
+    background-position: 6px 6px; 
+    background-repeat: no-repeat;
+}
+
+.inputField> input:focus {
+    border: 1px solid red;
+    background-color: #1f88f149;
+}
+
+.inputField {
+    display: grid;
+}
+
+.inputField > label {
+    color: aliceblue;
+    border-bottom: 5px;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.password > a {
+    color: aliceblue;
+    border-bottom: 5px;
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+.login > .btn {
+    font-size: .9rem;
+    padding: 10px;
+    background-color: white;
+    border-radius: 1.5rem;
+    width: 100%;
+    margin-top: 10px;
+    color: #1e8fffdc;
+    cursor: pointer;
+}
+
+.login > .btn:hover {
+    background-color: rgba(255, 255, 255, 0.726);
+}
+
+.img-user {
+    width: 100%;   
+    max-width: 300px;
+    border: 3px solid var(--color-purple);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .login {
+        width: 300px;
+    }
+}
+

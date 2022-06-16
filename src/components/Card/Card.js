@@ -2,7 +2,6 @@ import React from 'react';
 import './Card.css';
 
 const Card = ( props ) => {
-
     return(
         <div className="card-single">
             <div className="card-flex">
@@ -16,7 +15,7 @@ const Card = ( props ) => {
 
                     <small>{props.percentageCard}</small>
                 </div>
-                <div claclassNamess="card-chart sucess">
+                <div className="card-chart sucess">
                     <span className="las la-shopping-cart"></span>
                 </div>
             </div>
@@ -25,4 +24,5 @@ const Card = ( props ) => {
 }
 
 export default Card;
+
 

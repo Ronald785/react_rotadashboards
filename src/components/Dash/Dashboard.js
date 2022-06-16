@@ -2,10 +2,10 @@ import React from "react";
 import Card from '../Card/Card';
 import Invoice from '../Invoice/Invoice';
 import { useState, useEffect } from 'react';
-import './Dash.css';
+import './Dashboard.css';
 
-const Dash = (props) => {
-  
+
+function Dashboard(props) { 
   const [invoices, setInvoices] = useState([]);
 
   useEffect (() => {
@@ -50,10 +50,10 @@ const Dash = (props) => {
           })}
       </div>
 
-      <div class="jobs">
-          <h2>Últimas Vendas <small>ver todas <span class="las la-arrow-right"></span></small></h2>
+      <div className="jobs">
+          <h2>Últimas Vendas <small>ver todas <span className="las la-arrow-right"></span></small></h2>
           
-          <div class="table-responsive">
+          <div className="table-responsive">
             <table>
               <tbody>
                 {invoices.map((invoice, index) => {
@@ -75,4 +75,4 @@ const Dash = (props) => {
   );
 }
 
-export default Dash;
+export default Dashboard;

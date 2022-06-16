@@ -6,7 +6,7 @@ const Invoice = ( props ) => {
         <tr>
             <td>
                 <div>
-                    <span class="las la-shopping-cart"></span>
+                    <span className="las la-shopping-cart"></span>
                 </div>
             </td>
 
@@ -24,12 +24,6 @@ const Invoice = ( props ) => {
 
             <td>
                 <div>{props.numberInvoice}</div>
-            </td>
-
-            <td>
-                <div>
-                    <button class="myBtn">Expandir</button>
-                </div>
             </td>
         </tr>
     );
