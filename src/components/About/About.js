@@ -22,8 +22,6 @@ const About = () => {
                     <p>E-mail: ronald_marcos@rotadashboards.com</p>
                     <p>Telefone: (19) 3221-6314</p>
                     <p>WhatsApp: (19) 97755-6644</p>
-                    <p>Facebook: @rotadashboards</p>
-                    <p>Instagram: @rotadashboards</p>
                 </div> 
             </div>
 

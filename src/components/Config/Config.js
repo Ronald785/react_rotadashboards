@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { useAuth } from '../../context/AuthProvider';
+
 import './Config.css';
 
 const Config = () => {
+    const nameUserRef = useRef();
+    const photoUserRef = useRef();
+    const { updateUserProfile, currentUser } = useAuth();
+    const [loading, setLoading] = useState(false);
+
+    const displayName = currentUser.displayName;
+    const photoUrl = currentUser.photoURL;
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+    
+        try {
+          setLoading(true);
+          await updateUserProfile(nameUserRef.current.value, photoUserRef.current.value);
+        } 
+        catch {
+          console.log("Erro atualizando o perfil!");
+        }
+        setLoading(false);
+    }
+
+    function handleConfig() {
+        console.log(currentUser);
+    }
+
     return(
         <div>
             <div className="page-header">
@@ -11,32 +38,31 @@ const Config = () => {
                 </div>
             </div>
 
-            <div>
+            <form onSubmit={handleSubmit}>
                 <div className="row">
-                    <label for="name">Nome</label>
-                    <input type="text" id="nameAndLastnameUser" placeholder="Nome e sobrenome" required />
+                    <label>Nome</label>
+                    <input type="text" id="nameAndLastnameUser" ref={nameUserRef} placeholder="Nome e sobrenome" required defaultValue={displayName}/>
                 </div>
                 <div className="row">
-                    <label for="name">Foto de perfil</label>
-                    <input type="text" id="linkPhotoUser" placeholder="Nome e sobrenome" />
+                    <label>Foto de perfil</label>
+                    <input type="text" id="linkPhotoUser" ref={photoUserRef} placeholder="Link da foto" defaultValue={photoUrl}/>
                 </div>
                 <div className="row">
-                    <label for="name">CPF</label>
-                    <input type="text" id="cpfUser" disabled/>
-                </div>
-                <div className="row">
-                    <label for="name">Idade</label>
-                    <input type="number" id="ageUser" placeholder="Idade" min="18" required />
-                </div>
-                <div className="row">
-                    <button type="submit" id="buttonConfig">
+                    <button type="submit" id="buttonConfig" disabled={loading}>
                         Salvar
                     </button>
                 </div>
-            </div>
+                <div className="row">
+                    <button type="button" id="buttonConfig" onClick={handleConfig}>
+                        Config
+                    </button>
+                </div>
+            </form>
         </div>
     );
 }
 
 export default Config;
+
+
 
