@@ -24,11 +24,6 @@ const Config = () => {
         }
         setLoading(false);
     }
-
-    function handleConfig() {
-        console.log(currentUser);
-    }
-
     return(
         <div>
             <div className="page-header">
@@ -50,11 +45,6 @@ const Config = () => {
                 <div className="row">
                     <button type="submit" id="buttonConfig" disabled={loading}>
                         Salvar
-                    </button>
-                </div>
-                <div className="row">
-                    <button type="button" id="buttonConfig" onClick={handleConfig}>
-                        Config
                     </button>
                 </div>
             </form>
