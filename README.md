@@ -30,20 +30,6 @@ Dashboard criado para o projeto semestral de desenvolvimento web do 5° semestre
 <br>
 <br>
 
-<h2 align="center">
-    Interface
-</h2>
-<br>
-  <br>
-<ul>
-  <li>
-  Área inicial do sistema
-   <ul>
-      <img src="./images/homepage.png" width="500px;">
-   </ul>
-  </li>
-</ul>
-
 ## 👨🏽‍🎓 Integrantes
 <table>
 <tr>
